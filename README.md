@@ -33,9 +33,9 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 My first React project <a name="about-project"></a>
+# 📖 React Bookstore <a name="about-project"></a>
 
-**My first React project** is about setup a React project from scratch, and later implement a basic calculator on it.
+**React Bookstore** is about build an application for follow the advance reading my books.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -53,9 +53,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Home page with description of the app]**
-- **[Calculator, to do dome math]**
-- **[Quote, to know best thinkers tell about math]**
+- **[See my book list]**
+- **[See the reading advance percentage for each book]**
+- **[Add a new book]**
+- **[Remove a book]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,24 +82,15 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need: To be defined.
 
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
-
 ### Setup
 
-Clone this repository to your desired folder: git@github.com:lmunozm1702/my-first-react.git
+Clone this repository to your desired folder: git@github.com:lmunozm1702/react-bookstore.git
 
 ### Install
 
 Install this project with: To be defined.
 
-npx create-react-app my-first-react
-npm i react-route-dom
+npm install
 
 ### Usage
 
@@ -109,14 +101,6 @@ npm start
 ### Run tests
 
 To run tests, run the following command: To be defined.
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
 
 ### Deployment
 
@@ -136,15 +120,11 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Luis Muñoz**
 
 - GitHub: [@lmunozm1702](https://github.com/lmunozm1702)
 - Twitter: [@lmunozm](https://twitter.com/lmunozm)
 - LinkedIn: [luis-munoz-manriquez](https://www.linkedin.com/in/luis-munoz-manriquez)
-
-👤
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -206,8 +186,6 @@ I would like to thank...
 
 ## 📝 License <a name="license">- To be defined.</a>
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](LICENSE.txt) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

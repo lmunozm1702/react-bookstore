@@ -1,5 +1,5 @@
-const ADD_BOOK = 'my-app/books/ADD_BOOK';
-const REMOVE_BOOK = 'my-app/books/REMOVE_BOOK';
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 // Action creators
 export function addBook() {

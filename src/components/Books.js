@@ -1,25 +1,10 @@
 import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import AddBookForm from './AddBookForm';
 
-const books = [
-  {
-    author: 'Frank Herbert',
-    title: 'Dune',
-    id: uuidv4(),
-  },
-  {
-    author: 'Suzanne Collins',
-    title: 'Capital in the Twenty-First Century',
-    id: uuidv4(),
-  },
-];
-
 const Books = () => {
-  const deleteBookProps = (id) => {
-    console.log(id);
-  };
+  const books = useSelector((state) => state.books.bookList);
 
   return (
     <div className="bookListContainer">
@@ -31,7 +16,6 @@ const Books = () => {
               author={book.author}
               title={book.title}
               id={book.id}
-              deleteBookProps={deleteBookProps}
             />
           </div>
         ))}

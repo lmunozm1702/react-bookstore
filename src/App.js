@@ -4,6 +4,7 @@ import Categories from './components/Categories';
 import Books from './components/Books';
 
 function App() {
+  // store.dispatch(getBooks());
   return (
     <div className="mainContainer">
       <BrowserRouter>

@@ -32,10 +32,7 @@ export default function reducer(state = [], action = {}) {
     case ADD_BOOK: return {
       ...state, bookList: [...state.bookList, action.payload],
     };
-    case REMOVE_BOOK: return {
-      ...state,
-      bookList: state.bookList.filter((book) => book.id !== action.payload),
-    };
+    case REMOVE_BOOK: return state.filter((book) => book.id !== action.payload);
     case FETCH_BOOKS_FULFILLED:
       return Object.keys(action.payload).map((key) => {
         const { title, author, category } = action.payload[key][0];

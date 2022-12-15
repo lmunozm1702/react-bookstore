@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/books';
+import { removeBookAPI } from '../redux/books/removeBookAPI';
 
 const Book = (props) => {
   const {
@@ -14,6 +15,7 @@ const Book = (props) => {
 
   const handleRemoveButton = (event) => {
     event.preventDefault();
+    dispatch(removeBookAPI(id));
     dispatch(removeBook(id));
   };
 

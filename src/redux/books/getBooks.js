@@ -13,7 +13,18 @@ const getBooks = createAsyncThunk('bookstore/books/FETCH_BOOKS', async (_, thunk
 
   const responseJSON = await response.json();
   await thunkAPI.dispatch(initialBooksList(responseJSON));
-  return responseJSON;
+
+  const parsedData = Object.keys(responseJSON).map((key) => {
+    const { title, author, category } = responseJSON[key][0];
+    return {
+      item_id: key,
+      title,
+      author,
+      category,
+    };
+  });
+
+  return parsedData;
 });
 
 export default getBooks;

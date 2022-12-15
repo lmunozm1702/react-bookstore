@@ -15,6 +15,8 @@ const Books = () => {
     store.dispatch(getBooks());
   }, []);
 
+  console.log('**BOOKS**', books);
+
   return (
     <div className="bookListContainer">
       <div className="books">
@@ -24,7 +26,8 @@ const Books = () => {
             <Book
               author={book.author}
               title={book.title}
-              id={book.id}
+              id={book.item_id}
+              category={book.category}
             />
           </div>
         ))}

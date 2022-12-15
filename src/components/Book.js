@@ -6,7 +6,7 @@ import { removeBookAPI } from '../redux/books/removeBookAPI';
 
 const Book = (props) => {
   const {
-    id, title, author,
+    id, title, author, category,
   } = props;
 
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const Book = (props) => {
   };
 
   return (
-    <div>
+    <div key={id}>
       <div>
         Author:
         {' '}
@@ -35,6 +35,11 @@ const Book = (props) => {
         Id:
         {' '}
         {id}
+      </div>
+      <div>
+        Category:
+        {' '}
+        {category}
       </div>
       <div>
         <button
@@ -53,6 +58,7 @@ Book.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;

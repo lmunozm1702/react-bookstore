@@ -27,22 +27,15 @@ export function initialBooksList(payload) {
 
 // Reducer
 export default function reducer(state = [], action = {}) {
-  console.log('*1*', action);
+  console.log('payload', action.payload);
   switch (action.type) {
-    case ADD_BOOK: return {
-      ...state, bookList: [...state.bookList, action.payload],
-    };
-    case REMOVE_BOOK: return state.filter((book) => book.id !== action.payload);
+    case ADD_BOOK:
+      // return state.concat(action.payload);
+      return [...state, action.payload];
+    case REMOVE_BOOK:
+      return state.filter((book) => book.item_id !== action.payload);
     case FETCH_BOOKS_FULFILLED:
-      return Object.keys(action.payload).map((key) => {
-        const { title, author, category } = action.payload[key][0];
-        return {
-          id: key,
-          title,
-          author,
-          category,
-        };
-      });
+      return [...action.payload];
     default: return state;
   }
 }

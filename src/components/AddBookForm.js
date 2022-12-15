@@ -2,15 +2,19 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
+import addBookAPI from '../redux/books/addBookAPI';
 
 const AddBookForm = () => {
   const dispatch = useDispatch();
 
-  const [inputText, setInputText] = useState({ title: '', author: '', id: '' });
+  const [inputText, setInputText] = useState({
+    title: '', author: '', item_id: '', category: '',
+  });
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const newBook = { ...inputText, id: uuidv4() };
+    const newBook = { ...inputText, item_id: uuidv4() };
+    dispatch(addBookAPI(newBook));
     dispatch(addBook(newBook));
   };
 
@@ -41,6 +45,16 @@ const AddBookForm = () => {
           name="author"
           className="input-text"
           value={inputText.author}
+          onChange={onChange}
+        />
+      </div>
+      <div>
+        <input
+          type="text"
+          placeholder="Add a category..."
+          name="category"
+          className="input-text"
+          value={inputText.category}
           onChange={onChange}
         />
       </div>

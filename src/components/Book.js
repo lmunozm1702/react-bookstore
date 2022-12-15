@@ -11,8 +11,6 @@ const Book = (props) => {
 
   const dispatch = useDispatch();
 
-  // const [removeId, setRemoveId] = useState({ id: '' });
-
   const handleRemoveButton = (event) => {
     event.preventDefault();
     dispatch(removeBookAPI(id));

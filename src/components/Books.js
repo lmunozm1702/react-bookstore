@@ -1,8 +1,5 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-param-reassign */
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-// import { createAsyncThunk, isAsyncThunkAction } from '@reduxjs/toolkit';
 import Book from './Book';
 import AddBookForm from './AddBookForm';
 import store from '../redux/configureStore';
@@ -14,8 +11,6 @@ const Books = () => {
   useEffect(() => {
     store.dispatch(getBooks());
   }, []);
-
-  console.log('**BOOKS**', books);
 
   return (
     <div className="bookListContainer">

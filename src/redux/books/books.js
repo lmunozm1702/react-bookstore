@@ -2,6 +2,7 @@ const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 const FETCH_BOOKS = 'bookstore/books/FETCH_BOOKS';
 const FETCH_BOOKS_FULFILLED = 'bookstore/books/FETCH_BOOKS/fulfilled';
+const BOOKSTORE_END_POINT = `${process.env.REACT_APP_API_URL}/apps/${process.env.REACT_APP_BOOK_KEY}/books`;
 
 // Action creators
 export function addBook(payload) {
@@ -27,7 +28,6 @@ export function initialBooksList(payload) {
 
 // Reducer
 export default function reducer(state = [], action = {}) {
-  console.log('payload', action.payload);
   switch (action.type) {
     case ADD_BOOK:
       // return state.concat(action.payload);
@@ -39,3 +39,7 @@ export default function reducer(state = [], action = {}) {
     default: return state;
   }
 }
+
+export {
+  ADD_BOOK, REMOVE_BOOK, FETCH_BOOKS, FETCH_BOOKS_FULFILLED, BOOKSTORE_END_POINT,
+};

@@ -1,15 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { ImUser } from 'react-icons/im';
 
 const Navbar = () => (
-  <div className="navContainer">
-    <div className="navLogo">Bookstore CMS</div>
-    <nav className="menuOptions">
-      <ul className="navList">
-        <li><NavLink to="/" className={(navData) => (navData.isActive ? 'activeLink' : 'none')}>Books</NavLink></li>
-        <li><NavLink to="/categories" className={(navData) => (navData.isActive ? 'activeLink' : 'none')}>Categories</NavLink></li>
-      </ul>
-    </nav>
+  <div className="nav-bar">
+    <a className="nav-brand" href="#/">Bookstore CMS</a>
+    <ul className="nav-list">
+      <li><NavLink to="/" className={(navData) => (navData.isActive ? 'nav-link active-link' : 'nav-link')}>BOOKS</NavLink></li>
+      <li><NavLink to="/categories" className={(navData) => (navData.isActive ? 'nav-link active-link' : 'nav-link')}>CATEGORIES</NavLink></li>
+    </ul>
+    <div className="icon-button">
+      <ImUser />
+    </div>
   </div>
 );
 

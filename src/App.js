@@ -6,15 +6,17 @@ import Books from './components/Books';
 function App() {
   // store.dispatch(getBooks());
   return (
-    <div className="mainContainer">
-      <BrowserRouter>
-        <Navbar />
+
+    <BrowserRouter>
+      <Navbar />
+      <div className="main-container">
         <Routes>
           <Route path="/" element={<Books />} />
           <Route path="/categories" element={<Categories />} />
         </Routes>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
+
   );
 }
 

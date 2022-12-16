@@ -8,7 +8,7 @@ const AddBookForm = () => {
   const dispatch = useDispatch();
 
   const [inputText, setInputText] = useState({
-    title: '', author: '', item_id: '', category: '',
+    title: '', author: '', item_id: '', category: 'Action',
   });
 
   const handleSubmit = (event) => {
@@ -26,42 +26,36 @@ const AddBookForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form-container">
-      <h3>Add books form:</h3>
-      <div>
+    <section>
+      <h2 className="form-title">ADD NEW BOOK</h2>
+      <form onSubmit={handleSubmit} className="add-form">
         <input
           type="text"
-          placeholder="Add a title..."
+          placeholder="Book title"
           name="title"
-          className="input-text"
+          className="input title-input"
           value={inputText.title}
           onChange={onChange}
         />
-      </div>
-      <div>
         <input
           type="text"
-          placeholder="Add a author..."
+          placeholder="Author"
           name="author"
-          className="input-text"
+          className="input title-input"
           value={inputText.author}
           onChange={onChange}
         />
-      </div>
-      <div>
         <input
-          type="text"
+          type="hidden"
           placeholder="Add a category..."
           name="category"
           className="input-text"
           value={inputText.category}
           onChange={onChange}
         />
-      </div>
-      <div>
-        <button type="submit" className="input-submit">Submit</button>
-      </div>
-    </form>
+        <button type="submit" className="primary-button-big">ADD BOOK</button>
+      </form>
+    </section>
   );
 };
 export default AddBookForm;

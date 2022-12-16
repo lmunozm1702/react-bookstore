@@ -14,17 +14,20 @@ const Categories = () => {
   return (
     <div className="categories">
       <form onSubmit={handleSubmit} className="form-container">
-        <h3>
-          Categories page:
-          {statusText}
-        </h3>
-        <div>
-          <button
-            type="submit"
-            className="input-submit"
-          >
-            Check status
-          </button>
+        <div className="categories">
+          <div>
+            <button
+              type="submit"
+              className="primary-button-big"
+            >
+              Check status
+            </button>
+          </div>
+          <div>
+            <h2>
+              {statusText}
+            </h2>
+          </div>
         </div>
       </form>
     </div>

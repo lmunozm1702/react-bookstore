@@ -14,20 +14,22 @@ const Books = () => {
 
   return (
     <div className="bookListContainer">
-      <div className="books">
-        <h3>Books List:</h3>
+      <ul className="books">
         {books.map((book) => (
-          <div key={book.id}>
-            <Book
-              author={book.author}
-              title={book.title}
-              id={book.item_id}
-              category={book.category}
-            />
-          </div>
+          <li key={book.id}>
+            <div className="book">
+              <Book
+                author={book.author}
+                title={book.title}
+                id={book.item_id}
+                category={book.category}
+              />
+            </div>
+          </li>
         ))}
-      </div>
-      <div className="addBookForm">
+      </ul>
+      <div className="horizontal-divider" />
+      <div>
         <AddBookForm />
       </div>
     </div>
